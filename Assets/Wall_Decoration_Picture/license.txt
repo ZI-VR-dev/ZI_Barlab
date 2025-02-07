@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wall Decoration Picture
+* source:	https://sketchfab.com/3d-models/wall-decoration-picture-c1a68c298fd24e73ba569914a7b455d8
+* author:	wasabicats (https://sketchfab.com/wasabicats)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wall Decoration Picture" (https://sketchfab.com/3d-models/wall-decoration-picture-c1a68c298fd24e73ba569914a7b455d8) by wasabicats (https://sketchfab.com/wasabicats) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
