@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93d0a0d159da459986967b663da6fd0, type: 3}
   m_Name: FluidPassOpaque
   m_EditorClassIdentifier: 
-  voxelSize: 0.08
-  isosurface: 0.04
-  descentIterations: 4
+  voxelSize: 0.05
+  isosurface: 0.046
+  descentIterations: 2
   descentIsosurface: 0.1
   descentSpeed: 0.8
   smoothingIterations: 1
@@ -24,8 +24,8 @@ MonoBehaviour:
   customFluidMaterial: {fileID: 0}
   customUnderwaterMaterial: {fileID: 0}
   reflectionCubemap: {fileID: 0}
-  smoothness: 0.9
-  metallic: 0
+  smoothness: 0.908
+  metallic: 0.486
   turbidity: {r: 0, g: 0, b: 0, a: 0}
   thickness: 1
   indexOfRefraction: 1.33
