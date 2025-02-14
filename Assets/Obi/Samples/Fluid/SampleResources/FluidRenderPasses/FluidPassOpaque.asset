@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93d0a0d159da459986967b663da6fd0, type: 3}
   m_Name: FluidPassOpaque
   m_EditorClassIdentifier: 
-  voxelSize: 0.05
+  voxelSize: 0.1
   isosurface: 0.046
   descentIterations: 2
   descentIsosurface: 0.1
