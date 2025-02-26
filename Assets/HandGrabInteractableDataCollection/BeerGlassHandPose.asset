@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c252863d3264814b8c34a1c4a2e762d, type: 3}
+  m_Name: BeerGlassHandPose
+  m_EditorClassIdentifier: 
+  _interactablesData:
+  - poses:
+    - gripPose:
+        position: {x: -0.050831787, y: -0.076632805, z: 0.15938906}
+        rotation: {x: -0.5782201, y: 0.5040616, z: -0.36873764, w: -0.5249915}
+      handPose:
+        _handedness: 1
+        _fingersFreedom: 0200000002000000010000000100000000000000
+        _jointRotations:
+        - {x: 0.38728023, y: -0.41350558, z: -0.015482973, w: 0.82388496}
+        - {x: 0.26255012, y: -0.14838399, z: -0.15979178, w: 0.9399549}
+        - {x: -0.07939067, y: 0.039320037, z: -0.32484353, w: 0.94160897}
+        - {x: 0.07221391, y: -0.03412606, z: -0.28712827, w: 0.95455647}
+        - {x: 0.018589268, y: 0.059103295, z: -0.49003384, w: 0.8694983}
+        - {x: -0.022920508, y: -0.011474669, z: -0.65458405, w: 0.7555543}
+        - {x: -0.01706376, y: 0.017609328, z: -0.38797387, w: 0.9213441}
+        - {x: -0.03401359, y: 0.048508156, z: -0.5186566, w: 0.8529271}
+        - {x: -0.012915823, y: -0.0027164891, z: -0.56213677, w: 0.82693857}
+        - {x: -0.079801865, y: -0.017332949, z: -0.40845537, w: 0.9091177}
+        - {x: -0.08318486, y: 0.05026509, z: -0.5096555, w: 0.854871}
+        - {x: -0.04186028, y: -0.015974164, z: -0.5508731, w: 0.8333851}
+        - {x: -0.025950335, y: -0.028091334, z: -0.46541038, w: 0.8842679}
+        - {x: -0.20703596, y: 0.14034274, z: -0.018311737, w: 0.96804124}
+        - {x: 0.07608137, y: 0.010224614, z: -0.47254014, w: 0.8779592}
+        - {x: -0.07619036, y: 0.018399179, z: -0.4813298, w: 0.87302804}
+        - {x: 0.0022718757, y: -0.042981595, z: -0.47277656, w: 0.88013035}
+      scale: 1.0197451
+    grabType: 3
+    handAlignment: 1
+    scoringModifier:
+      _positionRotationWeight: 0.8
+    pinchGrabRules:
+      _thumbRequirement: 1
+      _indexRequirement: 1
+      _middleRequirement: 1
+      _ringRequirement: 0
+      _pinkyRequirement: 0
+      _unselectMode: 0
+    palmGrabRules:
+      _thumbRequirement: 1
+      _indexRequirement: 2
+      _middleRequirement: 2
+      _ringRequirement: 2
+      _pinkyRequirement: 1
+      _unselectMode: 0
