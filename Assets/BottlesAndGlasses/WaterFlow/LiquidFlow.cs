@@ -13,11 +13,12 @@ public class LiquidFlow : MonoBehaviour
 
     private Quaternion fixedRotation = Quaternion.identity; // Perfect alignment with the world axes
     private float tiltThreshold = 45f;
+    private float tiltThreshold2 = 135f;
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
 
-    private float bottleFillCurrent = 0.9f;
-    private float bottleFillEnd = 0.6f;
+    private float bottleFillCurrent = 0.54f;
+    private float bottleFillEnd = 0.5f;
     private float glassFillCurrent;
     private float glassFillEnd; 
     private float fillingSpeed = 0.05f;
@@ -37,7 +38,7 @@ public class LiquidFlow : MonoBehaviour
         // Calculate the tilting angle based on the x- and y-coordinates
         float tiltAngle = CalculateTiltAngle(bottle.transform);
 
-        if (tiltAngle > tiltThreshold)
+        if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
             liquidFlow.transform.rotation = fixedRotation;
             liquidFlow.transform.position = topOfBottle.transform.position;
