@@ -1055,7 +1055,7 @@ MonoBehaviour:
   volumeConstraintsData:
     batches: []
   groups: []
-  capacity: 1000
+  capacity: 5000
   resolution: 1
   restDensity: 1000
   smoothing: 2

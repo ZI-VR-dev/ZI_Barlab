@@ -30,7 +30,7 @@ MonoBehaviour:
   thickness: 8
   indexOfRefraction: 1.1
   diffuseMap: {fileID: 0}
-  diffuseColor: {r: 0, g: 0.05740881, b: 1, a: 1}
+  diffuseColor: {r: 0.8773585, g: 0.71943694, b: 0.086908154, a: 1}
   normalMap: {fileID: 0}
   normalMapIntensity: 1
   normalMapVelocityRange: {x: 0, y: 0}
