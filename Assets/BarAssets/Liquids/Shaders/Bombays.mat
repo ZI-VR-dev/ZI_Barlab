@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: aaa
+  m_Name: Bombays
   m_Shader: {fileID: -6465566751694194690, guid: a57edc48a4b2e894dbebe21f7f0a436a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -98,6 +98,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SideColor: {r: 1, g: 0.6367695, b: 0, a: 0}
-    - _TopColor: {r: 1, g: 0, b: 0, a: 0}
+    - _SideColor: {r: 0.32373622, g: 0.525237, b: 0.7075472, a: 0}
+    - _TopColor: {r: 0.3254902, g: 0.5254902, b: 0.7058824, a: 0}
   m_BuildTextureStacks: []
