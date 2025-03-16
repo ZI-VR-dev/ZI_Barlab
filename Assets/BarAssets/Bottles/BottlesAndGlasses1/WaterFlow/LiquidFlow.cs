@@ -7,7 +7,7 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject bottle;
     [SerializeField] private GameObject glass;
     [SerializeField] private GameObject liquidFlow;
-    [SerializeField] private GameObject topOfBottle;
+    //[SerializeField] private GameObject topOfBottle;
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
 
@@ -17,10 +17,10 @@ public class LiquidFlow : MonoBehaviour
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
 
-    private float bottleFillCurrent = 0.54f;
-    private float bottleFillEnd = 0.5f;
-    private float glassFillCurrent;
-    private float glassFillEnd; 
+    private float bottleFillCurrent = 0.9f;
+    private float bottleFillEnd = 0.2f;
+    private float glassFillCurrent = 0f;
+    private float glassFillEnd = 0.95f; 
     private float fillingSpeed = 0.05f;
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class LiquidFlow : MonoBehaviour
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
             liquidFlow.transform.rotation = fixedRotation;
-            liquidFlow.transform.position = topOfBottle.transform.position;
+            //liquidFlow.transform.position = topOfBottle.transform.position;
             liquidFlow.SetActive(true);
 
             // Change level of "Fill" in WhiskeyBottle
@@ -76,39 +76,6 @@ public class LiquidFlow : MonoBehaviour
 
         if (liquidInGlassMaterial.HasProperty("_Fill"))
 		{
-            // This switch is currently necessary, as the shader not setting properly to 0f.
-            // Some glass see a fill up at 0.4, while others at 0f.
-			switch (liquidInGlass.tag)
-			{
-                case "WhiskeyInGlass":
-                    glassFillCurrent = 0.38f;
-                    glassFillEnd = 0.5f;
-                    break;
-                case "CognacInGlass":
-                    glassFillCurrent = 0.46f;
-                    glassFillEnd = 0.55f;
-                    break;
-                case "ColaInGlass":
-                    glassFillCurrent = 0.22f;
-                    glassFillEnd = 0.65f;
-                    break;
-                case "ShotInGlass":
-                    glassFillCurrent = 0.405f;
-                    glassFillEnd = 0.6f;
-                    break;
-                case "WineInGlass":
-                    glassFillCurrent = 0.475f;
-                    glassFillEnd = 0.8f;
-                    break;
-                case "BeerInGlass":
-                    glassFillCurrent = 0.45f;
-                    glassFillEnd = 0.53f;
-                    break;
-                default:
-                    glassFillCurrent = 0f;
-                    glassFillEnd = 0.9f;
-                    break;
-			}
             liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
 		}
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FluidPassOpaque
   m_EditorClassIdentifier: 
   voxelSize: 0.15
-  isosurface: 0.046
+  isosurface: 0.004
   descentIterations: 2
   descentIsosurface: 0.1
   descentSpeed: 0.8
@@ -24,8 +24,8 @@ MonoBehaviour:
   customFluidMaterial: {fileID: 0}
   customUnderwaterMaterial: {fileID: 0}
   reflectionCubemap: {fileID: 0}
-  smoothness: 0.908
-  metallic: 0.486
+  smoothness: 0.725
+  metallic: 0.703
   turbidity: {r: 0, g: 0, b: 0, a: 0}
   thickness: 1
   indexOfRefraction: 1.33
