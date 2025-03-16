@@ -6,7 +6,7 @@ public class LiquidFlow : MonoBehaviour
 {
     [SerializeField] private GameObject bottle;
     [SerializeField] private GameObject glass;
-    [SerializeField] private GameObject liquidFlow;
+    [SerializeField] private GameObject liquidFlow; // == ObiSolver
     //[SerializeField] private GameObject topOfBottle;
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
@@ -37,6 +37,7 @@ public class LiquidFlow : MonoBehaviour
     {
         // Calculate the tilting angle based on the x- and y-coordinates
         float tiltAngle = CalculateTiltAngle(bottle.transform);
+        AdjustLiquidFlowAngle(bottle.transform);
 
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
@@ -89,6 +90,12 @@ public class LiquidFlow : MonoBehaviour
         float angle = Vector3.Angle(bottleUp, Vector3.up);
 
         return angle;
+    }
+
+    void AdjustLiquidFlowAngle(Transform bottleTransform)
+	{
+        float yBottleRotation = bottleTransform.eulerAngles.y;
+        liquidFlow.transform.eulerAngles = new Vector3(liquidFlow.transform.eulerAngles.x, yBottleRotation, liquidFlow.transform.eulerAngles.z);
     }
 
     void ChangeBottleFill()
