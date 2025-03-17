@@ -7,21 +7,21 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject bottle;
     [SerializeField] private GameObject glass;
     [SerializeField] private GameObject liquidFlow; // == ObiSolver
-    //[SerializeField] private GameObject topOfBottle;
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
+    [SerializeField] private AudioSource audiosource;
 
     private Quaternion fixedRotation = Quaternion.identity; // Perfect alignment with the world axes
-    private float tiltThreshold = 45f;
-    private float tiltThreshold2 = 135f;
+    private float tiltThreshold = -45f;
+    private float tiltThreshold2 = 45f;
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
 
     private float bottleFillCurrent = 0.9f;
     private float bottleFillEnd = 0.2f;
     private float glassFillCurrent = 0f;
-    private float glassFillEnd = 0.95f; 
-    private float fillingSpeed = 0.05f;
+    private float glassFillEnd = 0.8f; 
+    private float fillingSpeed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +42,8 @@ public class LiquidFlow : MonoBehaviour
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
             liquidFlow.transform.rotation = fixedRotation;
-            //liquidFlow.transform.position = topOfBottle.transform.position;
             liquidFlow.SetActive(true);
+            audiosource.Play();
 
             // Change level of "Fill" in WhiskeyBottle
             if (liquidInBottleMaterial.HasProperty("_Fill"))
@@ -58,6 +58,7 @@ public class LiquidFlow : MonoBehaviour
         }
         else
         {
+            audiosource.Stop();
             liquidFlow.SetActive(false);
         }
     }
