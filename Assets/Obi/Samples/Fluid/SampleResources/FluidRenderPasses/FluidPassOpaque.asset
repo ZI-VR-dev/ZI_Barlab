@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FluidPassOpaque
   m_EditorClassIdentifier: 
   voxelSize: 0.15
-  isosurface: 0.004
+  isosurface: 0.001
   descentIterations: 2
   descentIsosurface: 0.1
   descentSpeed: 0.8
   smoothingIterations: 1
-  smoothingIntensity: 0.8
+  smoothingIntensity: 0.07
   bevel: 1
   materialType: 1
   customFluidMaterial: {fileID: 0}
