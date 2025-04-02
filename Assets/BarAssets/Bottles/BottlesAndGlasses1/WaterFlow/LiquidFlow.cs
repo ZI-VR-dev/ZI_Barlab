@@ -19,8 +19,8 @@ public class LiquidFlow : MonoBehaviour
     private float bottleFillCurrent = 0.9f;
     private float bottleFillEnd = 0.2f;
     private float glassFillCurrent = 0f;
-    private float glassFillEnd = 0.8f; 
-    private float fillingSpeed = 0.2f;
+    private float glassFillEnd = 0.85f; 
+    private float fillingSpeed = 0.15f;
 
     // Start is called before the first frame update
     void Start()
