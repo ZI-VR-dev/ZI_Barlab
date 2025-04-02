@@ -11,7 +11,6 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject liquidInGlass;
     [SerializeField] private AudioSource audiosource;
 
-    private Quaternion fixedRotation = Quaternion.identity; // Perfect alignment with the world axes
     private float tiltThreshold = -45f;
     private float tiltThreshold2 = 45f;
     private Material liquidInBottleMaterial;
@@ -37,11 +36,18 @@ public class LiquidFlow : MonoBehaviour
     {
         // Calculate the tilting angle based on the x- and y-coordinates
         float tiltAngle = CalculateTiltAngle(bottle.transform);
-        AdjustLiquidFlowAngle(bottle.transform);
 
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
-            liquidFlow.transform.rotation = fixedRotation;
+            // Setup Water Emitter to the right direction
+            Vector3 horizontalTilt = new Vector3(transform.up.x, 0f, transform.up.z);
+            // Making sure that there is no division or multiplication by 0
+            if (horizontalTilt.sqrMagnitude > 0.001f)
+            {
+                // Rotate the water emitter so that it points in the horizontal tilt direction.
+                liquidFlow.transform.rotation = Quaternion.LookRotation(horizontalTilt);
+            }
+
             liquidFlow.SetActive(true);
             audiosource.Play();
 
@@ -91,12 +97,6 @@ public class LiquidFlow : MonoBehaviour
         float angle = Vector3.Angle(bottleUp, Vector3.up);
 
         return angle;
-    }
-
-    void AdjustLiquidFlowAngle(Transform bottleTransform)
-	{
-        float yBottleRotation = bottleTransform.eulerAngles.y;
-        liquidFlow.transform.eulerAngles = new Vector3(liquidFlow.transform.eulerAngles.x, yBottleRotation, liquidFlow.transform.eulerAngles.z);
     }
 
     void ChangeBottleFill()
