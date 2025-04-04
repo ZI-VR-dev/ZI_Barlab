@@ -29,6 +29,7 @@ public class LiquidFlow : MonoBehaviour
 
         GetAllMaterials();
         SetDefaultFillValues();
+        SetColorOfLiquidInGlass();
     }
 
     // Update is called once per frame
@@ -86,6 +87,14 @@ public class LiquidFlow : MonoBehaviour
 		{
             liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
 		}
+    }
+
+    void SetColorOfLiquidInGlass()
+	{
+        Debug.Log("Set Color of Liquid: " + liquidInGlassMaterial.GetColor("_SideColor"));
+        liquidInGlassMaterial.SetColor("_SideColor", liquidInBottleMaterial.GetColor("_SideColor"));
+        liquidInGlassMaterial.SetColor("_TopColor", liquidInBottleMaterial.GetColor("_TopColor"));
+        Debug.Log("AFTER Set Color of Liquid: " + liquidInGlassMaterial.GetColor("_SideColor"));
     }
 
     float CalculateTiltAngle(Transform bottleTransform)
