@@ -9,12 +9,14 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject liquidFlow; // == ObiSolver
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
+    [SerializeField] private GameObject foam;
     [SerializeField] private AudioSource audiosource;
 
     private float tiltThreshold = -45f;
     private float tiltThreshold2 = 45f;
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
+    private Material foamMaterial;
 
     private float bottleFillCurrent = 0.9f;
     private float bottleFillEnd = 0.2f;
@@ -74,6 +76,7 @@ public class LiquidFlow : MonoBehaviour
 	{
         liquidInBottleMaterial = liquidInBottle.GetComponent<Renderer>().material;
         liquidInGlassMaterial = liquidInGlass.GetComponent<Renderer>().material;
+        foamMaterial = foam.GetComponent<Renderer>().material;
     }
 
     void SetDefaultFillValues()
@@ -87,14 +90,17 @@ public class LiquidFlow : MonoBehaviour
 		{
             liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
 		}
+
+        if (foamMaterial.HasProperty("_Fill"))
+        {
+            foamMaterial.SetFloat("_Fill", glassFillCurrent);
+        }
     }
 
     void SetColorOfLiquidInGlass()
 	{
-        Debug.Log("Set Color of Liquid: " + liquidInGlassMaterial.GetColor("_SideColor"));
         liquidInGlassMaterial.SetColor("_SideColor", liquidInBottleMaterial.GetColor("_SideColor"));
         liquidInGlassMaterial.SetColor("_TopColor", liquidInBottleMaterial.GetColor("_TopColor"));
-        Debug.Log("AFTER Set Color of Liquid: " + liquidInGlassMaterial.GetColor("_SideColor"));
     }
 
     float CalculateTiltAngle(Transform bottleTransform)
@@ -122,7 +128,15 @@ public class LiquidFlow : MonoBehaviour
         if (glassFillCurrent < glassFillEnd)
         {
             glassFillCurrent += fillingSpeed * Time.deltaTime;
-            liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+            if (glassFillCurrent <= 0.8)
+			{
+                liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+            }
+			else
+			{
+                liquidInGlassMaterial.SetFloat("_Fill", 0.8f);
+                foamMaterial.SetFloat("_Fill", glassFillCurrent);
+			}
         }
     }
 }
