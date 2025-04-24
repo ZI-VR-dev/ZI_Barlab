@@ -22,7 +22,7 @@ public class LiquidFlow : MonoBehaviour
     private float bottleFillEnd = 0.2f;
     private float glassFillCurrent = 0f;
     private float glassFillEnd = 0.85f; 
-    private float fillingSpeed = 0.15f;
+    private float fillingSpeed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +76,10 @@ public class LiquidFlow : MonoBehaviour
 	{
         liquidInBottleMaterial = liquidInBottle.GetComponent<Renderer>().material;
         liquidInGlassMaterial = liquidInGlass.GetComponent<Renderer>().material;
-        foamMaterial = foam.GetComponent<Renderer>().material;
+        if (foam != null)
+		{
+            foamMaterial = foam.GetComponent<Renderer>().material;
+        }
     }
 
     void SetDefaultFillValues()
@@ -91,7 +94,7 @@ public class LiquidFlow : MonoBehaviour
             liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
 		}
 
-        if (foamMaterial.HasProperty("_Fill"))
+        if (foam != null && foamMaterial.HasProperty("_Fill"))
         {
             foamMaterial.SetFloat("_Fill", glassFillCurrent);
         }
@@ -128,15 +131,22 @@ public class LiquidFlow : MonoBehaviour
         if (glassFillCurrent < glassFillEnd)
         {
             glassFillCurrent += fillingSpeed * Time.deltaTime;
-            if (glassFillCurrent <= 0.8)
+            if (foam == null)
 			{
                 liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
             }
-			else
+            else if (foam != null)
 			{
-                liquidInGlassMaterial.SetFloat("_Fill", 0.8f);
-                foamMaterial.SetFloat("_Fill", glassFillCurrent);
-			}
+                if (glassFillCurrent <= 0.8)
+                {
+                    liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+                }
+                else
+                {
+                    liquidInGlassMaterial.SetFloat("_Fill", 0.8f);
+                    foamMaterial.SetFloat("_Fill", glassFillCurrent);
+                }
+            }
         }
     }
 }
