@@ -8993,6 +8993,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1557874998}
     m_Modifications:
+    - target: {fileID: 1130903357366607, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1019433709603911795, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -9001,10 +9005,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeizenGlass Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3248879693663857836, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3676502071305935833, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
       propertyPath: _defaultInteractable
       value: 
       objectReference: {fileID: 829653615}
+    - target: {fileID: 5705280413283466553, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5795845453323152489, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17873946
@@ -23925,7 +23937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6395326462534525060, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6597958723395848182, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_IsKinematic
@@ -29935,11 +29947,11 @@ PrefabInstance:
     - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: foam
       value: 
-      objectReference: {fileID: 857032292}
+      objectReference: {fileID: 562004431}
     - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: glass
       value: 
-      objectReference: {fileID: 857032294}
+      objectReference: {fileID: 2051326674}
     - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: bottle
       value: 
@@ -29959,7 +29971,7 @@ PrefabInstance:
     - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: liquidInGlass
       value: 
-      objectReference: {fileID: 857032293}
+      objectReference: {fileID: 562004432}
     - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: liquidInBottle
       value: 
