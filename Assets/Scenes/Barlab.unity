@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -4403,7 +4403,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -5879,8 +5879,8 @@ MonoBehaviour:
     damping: 0
     maxAnisotropy: 3
     sleepThreshold: 0.0005
-    maxVelocity: 50
-    maxAngularVelocity: 20
+    maxVelocity: 10
+    maxAngularVelocity: 4
     collisionMargin: 0.02
     maxDepenetration: 10
     colliderCCD: 1
@@ -9723,7 +9723,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -10295,7 +10295,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -10910,7 +10910,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -16492,7 +16492,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -16741,7 +16741,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -19196,7 +19196,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -20043,7 +20043,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -20292,7 +20292,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -20541,7 +20541,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
@@ -21105,7 +21105,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.85
   speed: 2.5
@@ -24741,7 +24741,7 @@ MonoBehaviour:
   m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   emitterBlueprint: {fileID: 11400000, guid: 450430f1251ce9f4d9430a685e0911de, type: 2}
-  filter: -65534
+  filter: -65535
   emissionMethod: 0
   minPoolSize: 0.5
   speed: 2.5
