@@ -9,18 +9,19 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject liquidFlow; // == ObiSolver
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
+    [SerializeField] private GameObject foam;
     [SerializeField] private AudioSource audiosource;
 
-    private Quaternion fixedRotation = Quaternion.identity; // Perfect alignment with the world axes
     private float tiltThreshold = -45f;
     private float tiltThreshold2 = 45f;
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
+    private Material foamMaterial;
 
     private float bottleFillCurrent = 0.9f;
     private float bottleFillEnd = 0.2f;
     private float glassFillCurrent = 0f;
-    private float glassFillEnd = 0.8f; 
+    private float glassFillEnd = 0.85f; 
     private float fillingSpeed = 0.2f;
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class LiquidFlow : MonoBehaviour
 
         GetAllMaterials();
         SetDefaultFillValues();
+        SetColorOfLiquidInGlass();
     }
 
     // Update is called once per frame
@@ -37,11 +39,18 @@ public class LiquidFlow : MonoBehaviour
     {
         // Calculate the tilting angle based on the x- and y-coordinates
         float tiltAngle = CalculateTiltAngle(bottle.transform);
-        AdjustLiquidFlowAngle(bottle.transform);
 
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
-            liquidFlow.transform.rotation = fixedRotation;
+            // Setup Water Emitter to the right direction
+            Vector3 horizontalTilt = new Vector3(transform.up.x, 0f, transform.up.z);
+            // Making sure that there is no division or multiplication by 0
+            if (horizontalTilt.sqrMagnitude > 0.001f)
+            {
+                // Rotate the water emitter so that it points in the horizontal tilt direction.
+                liquidFlow.transform.rotation = Quaternion.LookRotation(horizontalTilt);
+            }
+
             liquidFlow.SetActive(true);
             audiosource.Play();
 
@@ -67,6 +76,10 @@ public class LiquidFlow : MonoBehaviour
 	{
         liquidInBottleMaterial = liquidInBottle.GetComponent<Renderer>().material;
         liquidInGlassMaterial = liquidInGlass.GetComponent<Renderer>().material;
+        if (foam != null)
+		{
+            foamMaterial = foam.GetComponent<Renderer>().material;
+        }
     }
 
     void SetDefaultFillValues()
@@ -80,6 +93,17 @@ public class LiquidFlow : MonoBehaviour
 		{
             liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
 		}
+
+        if (foam != null && foamMaterial.HasProperty("_Fill"))
+        {
+            foamMaterial.SetFloat("_Fill", glassFillCurrent);
+        }
+    }
+
+    void SetColorOfLiquidInGlass()
+	{
+        liquidInGlassMaterial.SetColor("_SideColor", liquidInBottleMaterial.GetColor("_SideColor"));
+        liquidInGlassMaterial.SetColor("_TopColor", liquidInBottleMaterial.GetColor("_TopColor"));
     }
 
     float CalculateTiltAngle(Transform bottleTransform)
@@ -91,12 +115,6 @@ public class LiquidFlow : MonoBehaviour
         float angle = Vector3.Angle(bottleUp, Vector3.up);
 
         return angle;
-    }
-
-    void AdjustLiquidFlowAngle(Transform bottleTransform)
-	{
-        float yBottleRotation = bottleTransform.eulerAngles.y;
-        liquidFlow.transform.eulerAngles = new Vector3(liquidFlow.transform.eulerAngles.x, yBottleRotation, liquidFlow.transform.eulerAngles.z);
     }
 
     void ChangeBottleFill()
@@ -113,7 +131,22 @@ public class LiquidFlow : MonoBehaviour
         if (glassFillCurrent < glassFillEnd)
         {
             glassFillCurrent += fillingSpeed * Time.deltaTime;
-            liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+            if (foam == null)
+			{
+                liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+            }
+            else if (foam != null)
+			{
+                if (glassFillCurrent <= 0.8)
+                {
+                    liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
+                }
+                else
+                {
+                    liquidInGlassMaterial.SetFloat("_Fill", 0.8f);
+                    foamMaterial.SetFloat("_Fill", glassFillCurrent);
+                }
+            }
         }
     }
 }
