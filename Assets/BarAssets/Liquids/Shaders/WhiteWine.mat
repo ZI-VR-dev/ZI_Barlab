@@ -40,6 +40,6 @@ Material:
     m_Floats:
     - _Fill: 0.574
     m_Colors:
-    - _SideColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0}
-    - _TopColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0}
+    - _SideColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.16862746}
+    - _TopColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.050980393}
   m_BuildTextureStacks: []
