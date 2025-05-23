@@ -22940,7 +22940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6395326462534525060, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6597958723395848182, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_IsKinematic
@@ -25016,7 +25016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2043813559092622713, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2043813559092622713, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_LocalScale.z
@@ -25028,7 +25028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2043813559092622713, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.051
+      value: -0.0306
       objectReference: {fileID: 0}
     - target: {fileID: 2043813559092622713, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25062,13 +25062,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2206910923910523941, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f82771f722fe4346a205369e06170eb, type: 2}
     - target: {fileID: 2491701008461965234, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_Name
       value: GeneralGlass
       objectReference: {fileID: 0}
     - target: {fileID: 2491701008461965234, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5083438719398385984, guid: 837875b5fb44aa54b9ecde26db41e275, type: 3}
       propertyPath: m_IsKinematic
