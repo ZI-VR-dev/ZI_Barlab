@@ -98,6 +98,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SideColor: {r: 0.4627451, g: 0.2, b: 0.007843138, a: 0}
-    - _TopColor: {r: 0.462745, g: 0.19999996, b: 0.007843138, a: 0.3882353}
+    - _SideColor: {r: 0.462745, g: 0.19999996, b: 0.007843138, a: 0.4745098}
+    - _TopColor: {r: 0.46274495, g: 0.19999993, b: 0.007843138, a: 0.9137255}
   m_BuildTextureStacks: []
