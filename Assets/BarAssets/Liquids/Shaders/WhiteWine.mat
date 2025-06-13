@@ -38,8 +38,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Fill: 0.5
+    - _Fill: 0.79
     m_Colors:
     - _SideColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.16862746}
-    - _TopColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.050980393}
+    - _TopColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.15686275}
   m_BuildTextureStacks: []
