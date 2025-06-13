@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LiquidFlow : MonoBehaviour
 {
-    [SerializeField] private GameObject bottle;
-    [SerializeField] private GameObject glass;
-    [SerializeField] private GameObject liquidFlow; // == ObiSolver
+    [SerializeField] private GameObject bottleParentObject;
+    [SerializeField] private GameObject glassParentObject;
+    [SerializeField] private GameObject liquidFlow_ObiSolver; // == ObiSolver
     [SerializeField] private GameObject liquidInBottle;
     [SerializeField] private GameObject liquidInGlass;
     [SerializeField] private GameObject foam;
@@ -27,7 +27,7 @@ public class LiquidFlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        liquidFlow.SetActive(false);
+		liquidFlow_ObiSolver.SetActive(false);
 
         GetAllMaterials();
         SetDefaultFillValues();
@@ -38,7 +38,7 @@ public class LiquidFlow : MonoBehaviour
     void Update()
     {
         // Calculate the tilting angle based on the x- and y-coordinates
-        float tiltAngle = CalculateTiltAngle(bottle.transform);
+        float tiltAngle = CalculateTiltAngle(bottleParentObject.transform);
 
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
@@ -47,11 +47,11 @@ public class LiquidFlow : MonoBehaviour
             // Making sure that there is no division or multiplication by 0
             if (horizontalTilt.sqrMagnitude > 0.001f)
             {
-                // Rotate the water emitter so that it points in the horizontal tilt direction.
-                liquidFlow.transform.rotation = Quaternion.LookRotation(horizontalTilt);
+				// Rotate the water emitter so that it points in the horizontal tilt direction.
+				liquidFlow_ObiSolver.transform.rotation = Quaternion.LookRotation(horizontalTilt);
             }
 
-            liquidFlow.SetActive(true);
+			liquidFlow_ObiSolver.SetActive(true);
             audiosource.Play();
 
             // Change level of "Fill" in WhiskeyBottle
@@ -68,7 +68,7 @@ public class LiquidFlow : MonoBehaviour
         else
         {
             audiosource.Stop();
-            liquidFlow.SetActive(false);
+			liquidFlow_ObiSolver.SetActive(false);
         }
     }
 

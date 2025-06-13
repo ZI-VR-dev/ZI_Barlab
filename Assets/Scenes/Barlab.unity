@@ -8636,7 +8636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248879693663857836, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
       propertyPath: m_Name
-      value: WeizenGlass Variant
+      value: WeizenGlass
       objectReference: {fileID: 0}
     - target: {fileID: 3248879693663857836, guid: 57954a09cf1e08e4080fdd1b42d2ccbe, type: 3}
       propertyPath: m_IsActive
@@ -8737,50 +8737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kinematicForParticles: 0
---- !u!1 &863288310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 863288312}
-  - component: {fileID: 863288311}
-  m_Layer: 0
-  m_Name: ComputeCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &863288311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863288310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0ddc77554954cd78643d83b0505396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &863288312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863288310}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872039036
 GameObject:
   m_ObjectHideFlags: 0
@@ -16688,6 +16644,18 @@ PrefabInstance:
       propertyPath: liquidInGlass
       value: 
       objectReference: {fileID: 117698974}
+    - target: {fileID: 2619956621539978838, guid: 499beaa19a7f65c43b00d7d92bb0413c, type: 3}
+      propertyPath: glassParentObject
+      value: 
+      objectReference: {fileID: 2028743369127775070}
+    - target: {fileID: 2619956621539978838, guid: 499beaa19a7f65c43b00d7d92bb0413c, type: 3}
+      propertyPath: bottleParentObject
+      value: 
+      objectReference: {fileID: 1555223801}
+    - target: {fileID: 2619956621539978838, guid: 499beaa19a7f65c43b00d7d92bb0413c, type: 3}
+      propertyPath: liquidFlow_ObiSolver
+      value: 
+      objectReference: {fileID: 1701717916}
     - target: {fileID: 3416197967708279858, guid: 499beaa19a7f65c43b00d7d92bb0413c, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -19991,6 +19959,50 @@ MonoBehaviour:
   inheritVelocity: 0.11
   useShapeColor: 1
   emitterShapes: []
+--- !u!1 &1774501570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774501572}
+  - component: {fileID: 1774501571}
+  m_Layer: 0
+  m_Name: ComputeCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1774501571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774501570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0ddc77554954cd78643d83b0505396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1774501572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774501570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783298374
 GameObject:
   m_ObjectHideFlags: 0
@@ -23282,7 +23294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6395326462534525060, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_Name
-      value: BeerGlass Variant
+      value: BeerGlass
       objectReference: {fileID: 0}
     - target: {fileID: 6395326462534525060, guid: c8888f9c31c3ab24a900011a6167c485, type: 3}
       propertyPath: m_IsActive
@@ -24548,9 +24560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 2869541161795410319}
-  glass: {fileID: 1102150724}
-  liquidFlow: {fileID: 7606513300845971643}
+  bottleParentObject: {fileID: 0}
+  glassParentObject: {fileID: 0}
+  liquidFlow_ObiSolver: {fileID: 0}
   liquidInBottle: {fileID: 44777485300462555}
   liquidInGlass: {fileID: 200531245}
   foam: {fileID: 0}
@@ -24606,9 +24618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 607657231}
-  glass: {fileID: 4277774652330067435}
-  liquidFlow: {fileID: 1748079712}
+  bottleParentObject: {fileID: 607657231}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 1748079712}
   liquidInBottle: {fileID: 181715891}
   liquidInGlass: {fileID: 559945406}
   foam: {fileID: 0}
@@ -24646,9 +24658,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 414863063}
-  glass: {fileID: 1103855034}
-  liquidFlow: {fileID: 397153002}
+  bottleParentObject: {fileID: 414863063}
+  glassParentObject: {fileID: 2051326674}
+  liquidFlow_ObiSolver: {fileID: 397153002}
   liquidInBottle: {fileID: 1209005007}
   liquidInGlass: {fileID: 562004432}
   foam: {fileID: 562004431}
@@ -24686,9 +24698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 1664314597}
-  glass: {fileID: 4277774652330067435}
-  liquidFlow: {fileID: 385284678}
+  bottleParentObject: {fileID: 1664314597}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 385284678}
   liquidInBottle: {fileID: 1497041540}
   liquidInGlass: {fileID: 3707498045784909882}
   foam: {fileID: 0}
@@ -24726,9 +24738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 1703926884}
-  glass: {fileID: 4234572089943539994}
-  liquidFlow: {fileID: 1232067759}
+  bottleParentObject: {fileID: 1703926884}
+  glassParentObject: {fileID: 2028743369127775070}
+  liquidFlow_ObiSolver: {fileID: 1232067759}
   liquidInBottle: {fileID: 1372533348}
   liquidInGlass: {fileID: 117698974}
   foam: {fileID: 0}
@@ -24886,9 +24898,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 707513259}
-  glass: {fileID: 4277774652330067435}
-  liquidFlow: {fileID: 1647274266}
+  bottleParentObject: {fileID: 707513259}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 1647274266}
   liquidInBottle: {fileID: 1186187254}
   liquidInGlass: {fileID: 3707498045784909882}
   foam: {fileID: 0}
@@ -25084,9 +25096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 109764941}
-  glass: {fileID: 2773776878954619519}
-  liquidFlow: {fileID: 1956227948}
+  bottleParentObject: {fileID: 109764941}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 1956227948}
   liquidInBottle: {fileID: 1659168021}
   liquidInGlass: {fileID: 3707498045784909882}
   foam: {fileID: 0}
@@ -27423,9 +27435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 103537944}
-  glass: {fileID: 2028743369127775070}
-  liquidFlow: {fileID: 207667061}
+  bottleParentObject: {fileID: 103537944}
+  glassParentObject: {fileID: 2028743369127775070}
+  liquidFlow_ObiSolver: {fileID: 207667061}
   liquidInBottle: {fileID: 1097203259}
   liquidInGlass: {fileID: 117698974}
   foam: {fileID: 0}
@@ -27604,9 +27616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 1539971594}
-  glass: {fileID: 4277774652330067435}
-  liquidFlow: {fileID: 66243871}
+  bottleParentObject: {fileID: 1539971594}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 66243871}
   liquidInBottle: {fileID: 206406587}
   liquidInGlass: {fileID: 3707498045784909882}
   foam: {fileID: 0}
@@ -27644,9 +27656,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 2025659828}
-  glass: {fileID: 4234572089943539994}
-  liquidFlow: {fileID: 393347967}
+  bottleParentObject: {fileID: 2025659828}
+  glassParentObject: {fileID: 2028743369127775070}
+  liquidFlow_ObiSolver: {fileID: 393347967}
   liquidInBottle: {fileID: 2083661393}
   liquidInGlass: {fileID: 117698974}
   foam: {fileID: 0}
@@ -27992,9 +28004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 681021779}
-  glass: {fileID: 857032294}
-  liquidFlow: {fileID: 1124075502}
+  bottleParentObject: {fileID: 681021779}
+  glassParentObject: {fileID: 2051326674}
+  liquidFlow_ObiSolver: {fileID: 1124075502}
   liquidInBottle: {fileID: 516491774}
   liquidInGlass: {fileID: 562004432}
   foam: {fileID: 562004431}
@@ -29238,6 +29250,18 @@ PrefabInstance:
       propertyPath: liquidInBottle
       value: 
       objectReference: {fileID: 562320233}
+    - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
+      propertyPath: glassParentObject
+      value: 
+      objectReference: {fileID: 2051326674}
+    - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
+      propertyPath: bottleParentObject
+      value: 
+      objectReference: {fileID: 515909603}
+    - target: {fileID: 6683803957768360482, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
+      propertyPath: liquidFlow_ObiSolver
+      value: 
+      objectReference: {fileID: 450435849}
     - target: {fileID: 7204866562481067756, guid: 6bca87a1c2b45924c88cdc25626bcaac, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -29479,9 +29503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 469433906}
-  glass: {fileID: 857032294}
-  liquidFlow: {fileID: 428789343}
+  bottleParentObject: {fileID: 469433906}
+  glassParentObject: {fileID: 2051326674}
+  liquidFlow_ObiSolver: {fileID: 428789343}
   liquidInBottle: {fileID: 408996622}
   liquidInGlass: {fileID: 562004432}
   foam: {fileID: 562004431}
@@ -30039,6 +30063,18 @@ PrefabInstance:
       propertyPath: liquidInGlass
       value: 
       objectReference: {fileID: 117698974}
+    - target: {fileID: 5925245063475992430, guid: ca5f1a9e8697ae54b96eee41543f9329, type: 3}
+      propertyPath: glassParentObject
+      value: 
+      objectReference: {fileID: 2028743369127775070}
+    - target: {fileID: 5925245063475992430, guid: ca5f1a9e8697ae54b96eee41543f9329, type: 3}
+      propertyPath: bottleParentObject
+      value: 
+      objectReference: {fileID: 1837173166}
+    - target: {fileID: 5925245063475992430, guid: ca5f1a9e8697ae54b96eee41543f9329, type: 3}
+      propertyPath: liquidFlow_ObiSolver
+      value: 
+      objectReference: {fileID: 59965241}
     - target: {fileID: 6606941859370275742, guid: ca5f1a9e8697ae54b96eee41543f9329, type: 3}
       propertyPath: m_Name
       value: Liquid
@@ -30602,9 +30638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e408879f707c02b4f9d8ae8cbf16533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottle: {fileID: 220274107}
-  glass: {fileID: 2773776878954619519}
-  liquidFlow: {fileID: 1003205818}
+  bottleParentObject: {fileID: 220274107}
+  glassParentObject: {fileID: 2773776878954619519}
+  liquidFlow_ObiSolver: {fileID: 1003205818}
   liquidInBottle: {fileID: 1719011696}
   liquidInGlass: {fileID: 3707498045784909882}
   foam: {fileID: 0}
@@ -30650,4 +30686,4 @@ SceneRoots:
   - {fileID: 1974564179}
   - {fileID: 310363162}
   - {fileID: 873150740}
-  - {fileID: 863288312}
+  - {fileID: 1774501572}
