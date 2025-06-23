@@ -39,7 +39,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Fill: 0.79
+    - _FresnelEffect: 6
     m_Colors:
-    - _SideColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.16862746}
-    - _TopColor: {r: 0.9490196, g: 0.89411765, b: 0.7176471, a: 0.15686275}
+    - _Highlight: {r: 0, g: 0, b: 0, a: 0}
+    - _SideColor: {r: 0.9811321, g: 0.97226644, b: 0.7358491, a: 0.043137256}
+    - _TopColor: {r: 0.9074483, g: 0.9150943, b: 0.4445977, a: 0.09411765}
   m_BuildTextureStacks: []

@@ -52,6 +52,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DistortionNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -80,11 +84,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Fill: 0.974
+    - _Fill: 0.733
+    - _FresnelEffect: 5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
+    - _MetallicValue: 0.5
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -98,6 +104,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SideColor: {r: 0.8443396, g: 1, b: 0.9927034, a: 0.11372549}
-    - _TopColor: {r: 0.9103774, g: 1, b: 0.9957989, a: 0.14901961}
+    - _Highlight: {r: 1, g: 1, b: 1, a: 0.29803923}
+    - _SideColor: {r: 0.8443396, g: 1, b: 0.9927034, a: 0}
+    - _TopColor: {r: 0.9103774, g: 1, b: 0.9957989, a: 0.09411765}
   m_BuildTextureStacks: []
