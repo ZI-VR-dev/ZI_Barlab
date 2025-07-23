@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.audio": "77.0.0",
     "com.meta.xr.sdk.interaction.ovr": "72.0.0",
     "com.unity.collab-proxy": "2.6.0",
     "com.unity.editorcoroutines": "1.0.0",

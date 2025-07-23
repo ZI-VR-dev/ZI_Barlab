@@ -11,6 +11,8 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject liquidInGlass;
     [SerializeField] private GameObject foam;
     [SerializeField] private AudioSource audiosource;
+    [SerializeField] private bool isTilting = false;
+    [SerializeField] private bool isNotTilting = false;
 
     private float tiltThreshold = -45f;
     private float tiltThreshold2 = 45f;
@@ -23,12 +25,14 @@ public class LiquidFlow : MonoBehaviour
     private float glassFillCurrent = 0f;
     private float glassFillEnd = 0.85f; 
     private float fillingSpeed = 0.1f;
+    //private bool isTilting = false;
+    //private bool isNotTilting = false;
 
     // Start is called before the first frame update
     void Start()
     {
 		liquidFlow_ObiSolver.SetActive(false);
-
+        //audiosource.Play();
         GetAllMaterials();
         SetDefaultFillValues();
         SetColorOfLiquidInGlass();
@@ -42,6 +46,16 @@ public class LiquidFlow : MonoBehaviour
 
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
+            // Trigger audiosource.Play() only once, when bottle is tilted for the first time
+            isNotTilting = false;
+
+            if (isTilting == false) 
+            {
+                Debug.Log("Bottle is tilting");
+                isTilting = true;
+                audiosource.Play(); 
+            }
+
             // Setup Water Emitter to the right direction
             Vector3 horizontalTilt = new Vector3(transform.up.x, 0f, transform.up.z);
             // Making sure that there is no division or multiplication by 0
@@ -52,7 +66,7 @@ public class LiquidFlow : MonoBehaviour
             }
 
 			liquidFlow_ObiSolver.SetActive(true);
-            audiosource.Play();
+            //audiosource.Play();
 
             // Change level of "Fill" in WhiskeyBottle
             if (liquidInBottleMaterial.HasProperty("_Fill"))
@@ -67,8 +81,16 @@ public class LiquidFlow : MonoBehaviour
         }
         else
         {
-            audiosource.Stop();
-			liquidFlow_ObiSolver.SetActive(false);
+            // Trigger audiosource.Stop() only once, when bottle is not tilted anymore for the first time
+            isTilting = false;
+            if (isNotTilting == false) 
+            {
+                Debug.Log("Bottle is not tilting");
+                isNotTilting = true;
+                audiosource.Stop();
+            }
+
+            liquidFlow_ObiSolver.SetActive(false);
         }
     }
 
