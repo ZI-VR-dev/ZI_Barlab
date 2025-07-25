@@ -11,9 +11,8 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject liquidInGlass;
     [SerializeField] private GameObject foam;
     [SerializeField] private AudioSource audiosource;
-    [SerializeField] private bool isTilting = false;
-    [SerializeField] private bool isNotTilting = false;
-
+    
+    private bool isTilting = false;
     private float tiltThreshold = -45f;
     private float tiltThreshold2 = 45f;
     private Material liquidInBottleMaterial;
@@ -21,18 +20,15 @@ public class LiquidFlow : MonoBehaviour
     private Material foamMaterial;
 
     private float bottleFillCurrent = 0.9f;
-    private float bottleFillEnd = 0.2f;
+    private float bottleFillEnd = 0.4f;
     private float glassFillCurrent = 0f;
     private float glassFillEnd = 0.85f; 
-    private float fillingSpeed = 0.1f;
-    //private bool isTilting = false;
-    //private bool isNotTilting = false;
+    private float fillingSpeed = 0.05f;
 
     // Start is called before the first frame update
     void Start()
     {
 		liquidFlow_ObiSolver.SetActive(false);
-        //audiosource.Play();
         GetAllMaterials();
         SetDefaultFillValues();
         SetColorOfLiquidInGlass();
@@ -47,17 +43,15 @@ public class LiquidFlow : MonoBehaviour
         if (tiltAngle < tiltThreshold || tiltAngle > tiltThreshold2)
         {
             // Trigger audiosource.Play() only once, when bottle is tilted for the first time
-            isNotTilting = false;
-
             if (isTilting == false) 
             {
-                Debug.Log("Bottle is tilting");
                 isTilting = true;
-                audiosource.Play(); 
+                audiosource.Play();
             }
 
             // Setup Water Emitter to the right direction
             Vector3 horizontalTilt = new Vector3(transform.up.x, 0f, transform.up.z);
+
             // Making sure that there is no division or multiplication by 0
             if (horizontalTilt.sqrMagnitude > 0.001f)
             {
@@ -66,9 +60,8 @@ public class LiquidFlow : MonoBehaviour
             }
 
 			liquidFlow_ObiSolver.SetActive(true);
-            //audiosource.Play();
 
-            // Change level of "Fill" in WhiskeyBottle
+            // Change level of "Fill" in Bottles
             if (liquidInBottleMaterial.HasProperty("_Fill"))
             {
                 ChangeBottleFill();                
@@ -83,10 +76,8 @@ public class LiquidFlow : MonoBehaviour
         {
             // Trigger audiosource.Stop() only once, when bottle is not tilted anymore for the first time
             isTilting = false;
-            if (isNotTilting == false) 
+            if (isTilting == false)
             {
-                Debug.Log("Bottle is not tilting");
-                isNotTilting = true;
                 audiosource.Stop();
             }
 
@@ -139,6 +130,7 @@ public class LiquidFlow : MonoBehaviour
         return angle;
     }
 
+    // Change the level of shader in the bottle
     void ChangeBottleFill()
 	{
         if (bottleFillCurrent > bottleFillEnd)
@@ -148,7 +140,8 @@ public class LiquidFlow : MonoBehaviour
         }
     }
 
-    void ChangeGlassFill()
+	// Change the level of shader in the glass
+	void ChangeGlassFill()
 	{
         if (glassFillCurrent < glassFillEnd)
         {
