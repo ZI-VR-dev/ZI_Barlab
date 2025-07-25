@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Barlab.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/ObiTesting.unity
+    path: Assets/Scenes/Testing/ObiTesting.unity
     guid: ac9ef752a7422d54eb080f1b9b4c33cf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4c97eed8d88931d4799f09f8239f9547, type: 2}
