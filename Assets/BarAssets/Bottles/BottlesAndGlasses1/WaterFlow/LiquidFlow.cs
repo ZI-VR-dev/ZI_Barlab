@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LiquidFlow : MonoBehaviour
@@ -23,11 +24,12 @@ public class LiquidFlow : MonoBehaviour
     private float bottleFillEnd = 0.4f;
     private float glassFillCurrent = 0f;
     private float glassFillEnd = 0.85f; 
-    private float fillingSpeed = 0.05f;
+    private float fillingSpeed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        liquidInGlass = glassParentObject.transform.Find("Liquid").gameObject;
 		liquidFlow_ObiSolver.SetActive(false);
         GetAllMaterials();
         SetDefaultFillValues();
