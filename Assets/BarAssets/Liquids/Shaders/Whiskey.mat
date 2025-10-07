@@ -29,7 +29,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2998
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -75,12 +75,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
+    - _BUILTIN_QueueOffset: -2
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Fill: 0.946
+    - _Fill: 0.88
+    - _FresnelEffect: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -98,6 +99,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SideColor: {r: 0.3679245, g: 0.053447545, b: 0.022561418, a: 0.70980394}
-    - _TopColor: {r: 0.38679248, g: 0.09017012, b: 0.06020827, a: 0.6862745}
+    - _SideColor: {r: 0.44313717, g: 0.22352931, b: 0, a: 0.8039216}
+    - _TopColor: {r: 0.44339612, g: 0.22169802, b: 0, a: 0.8}
   m_BuildTextureStacks: []
