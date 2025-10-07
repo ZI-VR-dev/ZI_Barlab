@@ -23,13 +23,13 @@ Material:
   m_Name: WhiteWine
   m_Shader: {fileID: -6465566751694194690, guid: a57edc48a4b2e894dbebe21f7f0a436a, type: 3}
   m_Parent: {fileID: 2100000, guid: ef70a507769bff94f91b157cbe286da3, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2999
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -38,10 +38,13 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Fill: 0.79
-    - _FresnelEffect: 6
+    - _BUILTIN_QueueOffset: -1
+    - _Fill: 0.65
+    - _FresnelEffect: 20
+    - _WobbleX: 0
+    - _WobbleZ: 0
     m_Colors:
     - _Highlight: {r: 0, g: 0, b: 0, a: 0}
-    - _SideColor: {r: 0.9811321, g: 0.97226644, b: 0.7358491, a: 0.043137256}
-    - _TopColor: {r: 0.9074483, g: 0.9150943, b: 0.4445977, a: 0.09411765}
+    - _SideColor: {r: 0.103773594, g: 0.026780285, b: 0, a: 0.9254902}
+    - _TopColor: {r: 0.103773594, g: 0.025310634, b: 0, a: 0.9137255}
   m_BuildTextureStacks: []
