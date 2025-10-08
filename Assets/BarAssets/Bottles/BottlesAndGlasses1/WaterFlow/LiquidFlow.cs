@@ -29,7 +29,7 @@ public class LiquidFlow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        liquidInGlass = glassParentObject.transform.Find("Liquid").gameObject;
+        //liquidInGlass = glassParentObject.transform.Find("Liquid").gameObject;
 		liquidFlow_ObiSolver.SetActive(false);
         GetAllMaterials();
         SetDefaultFillValues();
