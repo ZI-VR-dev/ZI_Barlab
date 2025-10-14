@@ -23,13 +23,13 @@ Material:
   m_Name: RedWine
   m_Shader: {fileID: -6465566751694194690, guid: a57edc48a4b2e894dbebe21f7f0a436a, type: 3}
   m_Parent: {fileID: 2100000, guid: c6622b7128b4e554cb54aa3121c671f1, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3009
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -38,8 +38,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Fill: 0.97
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 9
+    - _Fill: 0.997
     m_Colors:
-    - _SideColor: {r: 0.23584908, g: 0.02215029, b: 0.018912429, a: 0.9019608}
-    - _TopColor: {r: 0.1792453, g: 0.030303678, b: 0.027901392, a: 0.84705883}
+    - _SideColor: {r: 0.23584902, g: 0.02215029, b: 0.018912429, a: 0.89411765}
+    - _TopColor: {r: 0.1792452, g: 0.030303678, b: 0.027901392, a: 0.8862745}
   m_BuildTextureStacks: []

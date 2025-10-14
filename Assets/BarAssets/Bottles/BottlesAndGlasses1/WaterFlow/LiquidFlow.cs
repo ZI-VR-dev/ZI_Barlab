@@ -1,3 +1,4 @@
+using Oculus.Interaction.Surfaces;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,27 +14,31 @@ public class LiquidFlow : MonoBehaviour
     [SerializeField] private GameObject foam;
     [SerializeField] private AudioSource audiosource;
     
+
     private bool isTilting = false;
-    private float tiltThreshold = -45f;
-    private float tiltThreshold2 = 45f;
+    private float tiltThreshold = -70f;
+    private float tiltThreshold2 = 70f;
     private Material liquidInBottleMaterial;
     private Material liquidInGlassMaterial;
     private Material foamMaterial;
 
-    private float bottleFillCurrent = 0.9f;
+    private float bottleFillCurrent = 0.997f;
     private float bottleFillEnd = 0.4f;
     private float glassFillCurrent = 0f;
-    private float glassFillEnd = 0.85f; 
+    private float glassFillEnd;
     private float fillingSpeed = 0.2f;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        glassFillEnd = liquidInGlass.GetComponent<Renderer>().material.GetFloat("_Fill");
         //liquidInGlass = glassParentObject.transform.Find("Liquid").gameObject;
-		liquidFlow_ObiSolver.SetActive(false);
+        liquidFlow_ObiSolver.SetActive(false);
         GetAllMaterials();
         SetDefaultFillValues();
         SetColorOfLiquidInGlass();
+        
     }
 
     // Update is called once per frame
@@ -137,7 +142,7 @@ public class LiquidFlow : MonoBehaviour
 	{
         if (bottleFillCurrent > bottleFillEnd)
         {
-            bottleFillCurrent -= fillingSpeed * Time.deltaTime;
+            bottleFillCurrent -= (fillingSpeed/10) * Time.deltaTime;
             liquidInBottleMaterial.SetFloat("_Fill", bottleFillCurrent);
         }
     }
