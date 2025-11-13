@@ -159,7 +159,7 @@ public class LiquidFlow : MonoBehaviour
             }
             else if (foam != null)
 			{
-                if (glassFillCurrent <= 0.8)
+                if (glassFillCurrent <= 0.7)
                 {
                     liquidInGlassMaterial.SetFloat("_Fill", glassFillCurrent);
                 }
